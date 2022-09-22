@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--head图标显示-->
+    <link rel="icon" href="">
+    <title>Sugarscat</title>
+    <!--animate-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--链接的CSS样式-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--弹窗-->
+    <script type="text/javascript">
+        //窗口宽度
+        let winWidth = 0;
+        //函数：获取窗口尺寸
+        function findWindowSize() {
+            //获取窗口宽度
+            if (window.innerWidth)
+                winWidth = window.innerWidth;
+            else if ((document.body) && (document.body.clientWidth))
+                winWidth = document.body.clientWidth;
+            // 跳转网页
+            if (winWidth < 850){
+                window.location.href="index-phone.html";
+            }
+        }
+        //获取窗口尺寸
+        findWindowSize();
+        //窗口大小改变后，调用函数，获取数值
+        window.onresize=findWindowSize;
+    </script>
+</head>
+<body>
+<div id="v-computer" class="v-computer">
+    <div id="changeLanguage" class="content zh">
+
+    </div>
+</div>
+</body>
+</html>
