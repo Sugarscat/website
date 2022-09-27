@@ -97,14 +97,6 @@ body {
     margin: 100px;
 }
 
-.con-right .choice-ch::before,
-.con-right .choice-en::before{
-    content: "";
-    border-radius: 50%;
-    border: 2px solid #ff960d;
-    background-color: #ffa11a;
-}
-
 .con-right .choice-ch::before{
     width: 22px;
     height: 22px;

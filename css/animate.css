@@ -29,6 +29,13 @@
   font-family: alliewriting, serif;
 }
 
+.choice-language::before,
+.choice-language::before{
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #ff960d;
+  background-color: #ffa11a;
+}
 
 /* shake */
 @keyframes shake {
