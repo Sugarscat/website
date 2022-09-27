@@ -20,10 +20,142 @@ body {
     src: url("font/STHeiti-Light.ttc");
 }
 
+/* content */
 .content{
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-width: 850px;
+    min-height: 615px;
+    background: #c2e9f6;
+    overflow: auto;
 }
+
+.con-left{
+    width: 50%;
+    height: 100%;
+    min-height: 615px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 100px;
+    width: 255px;
+}
+
+/* main-menu */
+.main-menu {
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* navigation */
+.main-menu ul{
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+}
+
+.main-menu li {
+    display: inline;
+}
+
+.main-menu .li2 {
+    display: inline;
+    padding-bottom: 20px;
+}
+
+.main-menu ul a {
+    font-family: STHeiti-Light, serif;
+    font-size: 30px;
+    display:  block;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+}
+
+.con-right{
+    width: 50%;
+    height: 100%;
+    min-height: 615px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: all 0.25s ease-in;
+}
+
+/*choice-language*/
+.con-right .choice-language{
+    margin: 100px;
+}
+
+.con-right .choice-ch::before,
+.con-right .choice-en::before{
+    content: "";
+    border-radius: 50%;
+    border: 2px solid #ff960d;
+    background-color: #ffa11a;
+}
+
+.con-right .choice-ch::before{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 130px;
+    top: 103px;
+    animation: switch-reverse 0.35s forwards;
+}
+
+
+.con-right .choice-en::before{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+}
+
+.con-right .choice-en::before{
+    animation: switch 0.35s forwards;
+}
+
+
+@keyframes switch {
+    0% {
+        right: 130px;
+    }
+    60% {
+        right: 120px;
+        top:106px;
+        height: 16px;
+    }
+    100% {
+        right: 104px;
+    }
+}
+
+@keyframes switch-reverse {
+    0% {
+        right: 104px;
+    }
+    60% {
+        right: 114px;
+        top:106px;
+        height: 16px;
+    }
+    100% {
+        right: 130px;
+    }
+}
+
+/*achievement.html*/
+
 
 /*手机*/
 @media screen and (max-width: 850px){

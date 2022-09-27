@@ -6,6 +6,14 @@
   src: url("font/alliewriting.ttf");
 }
 
+.ch .en{
+  display: none;
+}
+
+.en .ch {
+  display: none;
+}
+
 .choice-language{
   height: 32px;
   width: 60px;
@@ -13,170 +21,14 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 2px solid #72cce3;
-  background-color: #96dcee;
+  border: 2px solid #feab41;
+  background-color: #fcd182;
   transition: all 0.35s ease-in;
   cursor: pointer;
   color: #878787;
   font-family: alliewriting, serif;
 }
 
-.con-right .choice-language{
-  margin: 100px;
-}
-
-.content-under .choice-ch::before,
-.head .choice-ch::before,
-.con-right .choice-ch::before{
-  content: "";
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 2px solid #f5eb71;
-  background-color: #fffaa8;
-}
-
-.con-right .choice-ch::before{
-  position: absolute;
-  right: 130px;
-  top: 103px;
-  animation: switch-reverse 0.35s forwards;
-}
-
-.content-under .choice-ch::before{
-  position: absolute;
-  right: 60px;
-  /*bottom: 47px;*/
-  animation: switch-reverse-phone 0.35s forwards;
-}
-
-.content-under .choice-en::before,
-.head .choice-en::before,
-.con-right .choice-en::before{
-  content: "";
-  border-radius: 50%;
-  border: 2px solid #f5eb71;
-  background-color: #fffaa8;
-}
-
-.content-under .choice-en::before,
-.con-right .choice-en::before{
-  position: absolute;
-  width: 22px;
-  height: 22px;
-}
-
-.content-under .choice-en::before{
-  animation: switch-phone 0.35s forwards;
-
-}
-
-.con-right .choice-en::before{
-  animation: switch 0.35s forwards;
-}
-
-.head .choice-ch::before{
-  position: absolute;
-  right: 28.5px;
-  top: 1.5px;
-  animation: switch-reverse-ach 0.35s forwards;
-}
-
-.head .choice-en::before{
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  right: 1.5px;
-  top: 1.5px;
-  animation: switch-ach 0.35s forwards;
-}
-
-@keyframes switch {
-  0% {
-    right: 130px;
-  }
-  60% {
-    right: 120px;
-    top:106px;
-    height: 16px;
-  }
-  100% {
-    right: 104px;
-  }
-}
-
-@keyframes switch-reverse {
-  0% {
-    right: 104px;
-  }
-  60% {
-    right: 114px;
-    top:106px;
-    height: 16px;
-  }
-  100% {
-    right: 130px;
-  }
-}
-
-@keyframes switch-phone {
-  0% {
-    right: 60px;
-  }
-  60% {
-    right: 35px;
-  }
-  100% {
-    right: 34px;
-  }
-}
-
-@keyframes switch-reverse-phone {
-  0% {
-    right: 34px;
-  }
-  60% {
-    right: 55px;
-  }
-  100% {
-    right: 60px;
-  }
-}
-
-@keyframes switch-ach {
-  0% {
-    right: 28.5px;
-  }
-  60% {
-    right: 12px;
-    top:4px;
-    height: 16px;
-  }
-  100% {
-    right: 1.5px;
-  }
-}
-
-@keyframes switch-reverse-ach {
-  0% {
-    right: 1.5px;
-  }
-  60% {
-    right: 16px;
-    top:4px;
-    height: 16px;
-  }
-  100% {
-    right: 28.5px;
-  }
-}
-
-.ch .en{
-  display: none;
-}
-.en .ch {
-  display: none;
-}
 
 /* shake */
 @keyframes shake {
@@ -876,12 +728,4 @@ div.at-container {
     filter: blur(0);
     opacity: 1;
   }
-}
-
-/*语言切换*/
-.ch .en{
-  display: none;
-}
-.en .ch{
-  display: none;
 }
