@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    min-height: 615px;
+    min-width: 850px;
+    display: grid;
+    place-items: center;
+}
+
+/*font*/
+@font-face {
+    font-family: alliewriting;
+    src: url("font/alliewriting.ttf");
+}
+@font-face {
+    font-family: STHeiti-Light;
+    src: url("font/STHeiti-Light.ttc");
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+
+/*手机*/
+@media screen and (max-width: 850px){
+
+}

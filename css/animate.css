@@ -877,3 +877,11 @@ div.at-container {
     opacity: 1;
   }
 }
+
+/*语言切换*/
+.ch .en{
+  display: none;
+}
+.en .ch{
+  display: none;
+}

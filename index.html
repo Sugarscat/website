@@ -5,55 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--head图标显示-->
     <link rel="icon" href="">
+    <!--suppress SpellCheckingInspection -->
     <title>Sugarscat</title>
     <!--animate-->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!--链接的CSS样式-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--弹窗-->
-
-    <!--样式初始化-->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            height: 100vh;
-            width: 100%;
-            min-width: 850px;
-            display: grid;
-            place-items: center;
-        }
-    </style>
-    <!--窗口大小识别-->
-    <script type="text/javascript">
-        //窗口宽度
-        let winWidth = 0;
-        //函数：获取窗口尺寸
-        function findWindowSize() {
-            //获取窗口宽度
-            if (window.innerWidth)
-                winWidth = window.innerWidth;
-            else if ((document.body) && (document.body.clientWidth))
-                winWidth = document.body.clientWidth;
-            // 跳转网页
-            if (winWidth < 850){
-                window.location.href="index-phone.html";
-            }
-        }
-        //获取窗口尺寸
-        findWindowSize();
-        //窗口大小改变后，调用函数，获取数值
-        window.onresize=findWindowSize;
-    </script>
+    <!--js-->
+    <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<div id="v-computer" class="v-computer">
-    <div id="changeLanguage" class="content zh">
+<div id="changeLanguage" class="content ch">
+    <div class="con-left">
+        <!-- logo -->
+        <div class="logo">
+            <img src="" alt="logo" height="40px">
+        </div>
+        <!-- logo end-->
+        <!--  navigation -->
+        <div class="nav-holder main-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://sugarscat.github.io" class="hvr-grow">
+                            <span class="at-item ch">首页</span>
+                            <span class="at-item en">HOME</span>
+                        </a>
+                    </li>
+                    <li class="li2">
+                        <a href="achievement.html" class="hvr-grow">
+                            <span class="at-item ch">成果</span>
+                            <span class="at-item en">ACHIEVEMENT</span>
+                        </a>
+                    </li>
+                    <li class="li2">
+                        <a id="about" href="about.html" class="hvr-grow">
+                            <span class="at-item ch">关于</span>
+                            <span class="at-item en">ABOUT</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- navigation  end -->
+    </div>
+    <!--    con-right-->
+    <div class="con-right">
+        <button id="choice-language" onclick="changeLanguage()" class="choice-language choice-ch">
+            <span>Ch</span>
+            <span>En</span>
+        </button>
 
     </div>
+    <!--    con-right end-->
 </div>
-
-<script type="text/javascript" src="js/scripts.js"></script>
+<!-- content end-->
+<script type="text/javascript">
+    //获取
+    const cookie = document.cookie;
+    if (cookie === "en"){
+        changeLanguage();
+    }
+</script>
 </body>
 </html>
