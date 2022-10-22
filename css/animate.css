@@ -29,7 +29,6 @@
   font-family: alliewriting, serif;
 }
 
-.choice-language::before,
 .choice-language::before{
   content: "";
   border-radius: 50%;

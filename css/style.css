@@ -146,10 +146,104 @@ body {
     }
 }
 
+/*head 公用*/
+.head{
+    height: 60px;
+    width: 100%;
+    box-shadow: 0 0 1px 1px #efefef;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.head .logo-ach{
+    padding: 0 30px 0 40px;
+}
+
+.head ul{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.head li {
+    display: inline;
+}
+
+.head .li2 {
+    display: inline;
+    padding-left: 30px;
+}
+
+.head ul a {
+    height: 16px;
+    font-size: 16px;
+    display:  block;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+}
+
+.head .choice-language{
+    text-decoration: none;
+    margin: 0;
+    position: absolute;
+    right: 50px;
+}
+
+.head .choice-ch::before{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 28.5px;
+    top: 1.5px;
+    animation: switch-reverse-ach 0.35s forwards;
+}
+
+
+.head .choice-en::before{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+}
+
+.head .choice-en::before{
+    animation: switch-ach 0.35s forwards;
+}
+
+
+@keyframes switch-ach {
+    0% {
+        right: 28.5px;
+    }
+    60% {
+        right: 13px;
+        top:3px;
+        height: 16px;
+    }
+    100% {
+        right: 1.5px;
+    }
+}
+
+@keyframes switch-reverse-ach {
+    0% {
+        right: 1.5px;
+    }
+    60% {
+        right: 15.6px;
+        top:3px;
+        height: 16px;
+    }
+    100% {
+        right: 28.5px;
+    }
+}
+
 /*achievement.html*/
 
 
-/*手机*/
+/*phone*/
 @media screen and (max-width: 850px){
-
+    /*index.html*/
 }

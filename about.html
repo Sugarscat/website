@@ -15,6 +15,48 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-
+<div id="changeLanguage" class="content ch">
+    <!--  head-->
+    <div class="head">
+        <!-- logo -->
+        <div class="logo-ach">
+            <img src="img/logo.png" alt="logo" height="40px">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://sugarscat.github.io" class="hvr-grow">
+                        <span class="at-item ch">首页</span>
+                        <span class="at-item en">HOME</span>
+                    </a>
+                </li>
+                <li class="li2">
+                    <a href="achievement.html" class="hvr-grow">
+                        <span class="at-item ch">成果</span>
+                        <span class="at-item en">ACHIEVEMENT</span>
+                    </a>
+                </li>
+                <li class="li2">
+                    <a href="about.html" class="hvr-grow">
+                        <span class="at-item ch">关于</span>
+                        <span class="at-item en">ABOUT</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button id="choice-language" onclick="changeLanguage()" class="choice-language choice-ch">
+            <span>Ch</span>
+            <span>En</span>
+        </button>
+    </div>
+    <!--  head end-->
+</div>
+<script type="text/javascript">
+    //获取
+    const cookie = document.cookie;
+    if (cookie === "en"){
+        changeLanguage();
+    }
+</script>
 </body>
 </html>
