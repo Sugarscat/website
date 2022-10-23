@@ -150,7 +150,6 @@ body {
 .head{
     height: 60px;
     width: 100%;
-    box-shadow: 0 0 1px 1px #efefef;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -170,18 +169,21 @@ body {
     display: inline;
 }
 
-.head .li2 {
-    display: inline;
-    padding-left: 30px;
-}
 
 .head ul a {
-    height: 16px;
+    height: 60px;
+    width: 115px;
     font-size: 16px;
-    display:  block;
+    display:  flex;
     text-decoration: none;
     color: black;
-    text-align:center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    box-shadow: 0 1px 0 0 #181818;
 }
 
 .head .choice-language{
