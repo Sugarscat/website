@@ -147,7 +147,7 @@ body {
 }
 
 /*head 公用*/
-.head{
+header{
     height: 60px;
     width: 100%;
     display: flex;
@@ -155,22 +155,22 @@ body {
     align-items: center;
 }
 
-.head .logo-ach{
+header .logo-ach{
     padding: 0 30px 0 40px;
 }
 
-.head ul{
+header ul{
     padding: 0;
     display: flex;
     flex-direction: row;
 }
 
-.head li {
+header li {
     display: inline;
 }
 
 
-.head ul a {
+header ul a {
     height: 60px;
     width: 115px;
     font-size: 16px;
@@ -186,14 +186,14 @@ body {
     box-shadow: 0 1px 0 0 #181818;
 }
 
-.head .choice-language{
+header .choice-language{
     text-decoration: none;
     margin: 0;
     position: absolute;
     right: 50px;
 }
 
-.head .choice-ch::before{
+header .choice-ch::before{
     width: 22px;
     height: 22px;
     position: absolute;
@@ -203,13 +203,13 @@ body {
 }
 
 
-.head .choice-en::before{
+header .choice-en::before{
     position: absolute;
     width: 22px;
     height: 22px;
 }
 
-.head .choice-en::before{
+header .choice-en::before{
     animation: switch-ach 0.35s forwards;
 }
 
