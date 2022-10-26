@@ -20,6 +20,14 @@ body {
     src: url("font/STHeiti-Light.ttc");
 }
 
+.STHeiti-Light {
+    font-family: STHeiti-Light, serif;
+}
+
+.alliewriting{
+    font-family: alliewriting, serif;
+}
+
 /* content */
 .content{
     display: flex;
@@ -27,8 +35,8 @@ body {
     height: 100vh;
     min-width: 850px;
     min-height: 615px;
-    background: #c2e9f6;
     overflow: auto;
+    flex-direction: column;
 }
 
 .con-left{
@@ -146,8 +154,15 @@ body {
     }
 }
 
-/*head 公用*/
+/*header 公用*/
 header{
+    height: 150px;
+    width: 100%;
+    background-color: #c2e9f6;
+
+}
+
+.headMenu{
     height: 60px;
     width: 100%;
     display: flex;
@@ -155,22 +170,21 @@ header{
     align-items: center;
 }
 
-header .logo-ach{
+.headMenu .logo-ach{
     padding: 0 30px 0 40px;
 }
 
-header ul{
+.headMenu ul{
     padding: 0;
     display: flex;
     flex-direction: row;
 }
 
-header li {
+.headMenu li {
     display: inline;
 }
 
-
-header ul a {
+.headMenu ul a {
     height: 60px;
     width: 115px;
     font-size: 16px;
@@ -182,18 +196,18 @@ header ul a {
     justify-content: center;
 }
 
-.active {
+.headMenu .active {
     box-shadow: 0 1px 0 0 #181818;
 }
 
-header .choice-language{
+.headMenu .choice-language{
     text-decoration: none;
     margin: 0;
     position: absolute;
     right: 50px;
 }
 
-header .choice-ch::before{
+.headMenu .choice-ch::before{
     width: 22px;
     height: 22px;
     position: absolute;
@@ -203,16 +217,23 @@ header .choice-ch::before{
 }
 
 
-header .choice-en::before{
+.headMenu .choice-en::before{
     position: absolute;
     width: 22px;
     height: 22px;
 }
 
-header .choice-en::before{
+.headMenu .choice-en::before{
     animation: switch-ach 0.35s forwards;
 }
 
+.headMenu .donate{
+    width: 200px;
+}
+
+.mainContent{
+    padding: 0 40px 0 40px;
+}
 
 @keyframes switch-ach {
     0% {
@@ -244,7 +265,27 @@ header .choice-en::before{
 
 /*achievement.html*/
 
+.selfIntroduction{
+    display: flex;
+    flex-direction: row;
+}
 
+.personalPhoto{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.identityDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.socialNetworkNavBar a{
+    padding: 5px 5px 0 5px;
+}
 /*phone*/
 @media screen and (max-width: 850px){
     /*index.html*/
