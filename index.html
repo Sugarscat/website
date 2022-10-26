@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--head图标显示-->
-    <link rel="icon" href="">
+    <link rel="icon" href="img/headPortrait.png">
     <!--suppress SpellCheckingInspection -->
     <title>Sugarscat</title>
     <!--animate-->
@@ -15,51 +15,54 @@
     <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<div id="changeLanguage" class="content ch">
-    <div class="con-left">
-        <!-- logo -->
-        <div class="logo">
-            <img src="img/logo.png" alt="logo" height="60px">
+<div id="changeLanguage" class="main ch">
+    <div class="content-i">
+        <div class="con-left">
+            <!-- logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="logo" height="60px">
+            </div>
+            <!-- logo end-->
+            <!--  navigation -->
+            <div class="nav-holder main-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="https://sugarscat.github.io" class="hvr-grow">
+                                <span class="at-item ch">首页</span>
+                                <span class="at-item en">HOME</span>
+                            </a>
+                        </li>
+                        <li class="li2">
+                            <a href="achievement.html" class="hvr-grow">
+                                <span class="at-item ch">成果</span>
+                                <span class="at-item en">ACHIEVEMENT</span>
+                            </a>
+                        </li>
+                        <li class="li2">
+                            <a id="about" href="about.html" class="hvr-grow">
+                                <span class="at-item ch">关于</span>
+                                <span class="at-item en">ABOUT</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- navigation  end -->
         </div>
-        <!-- logo end-->
-        <!--  navigation -->
-        <div class="nav-holder main-menu">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://sugarscat.github.io" class="hvr-grow">
-                            <span class="at-item ch">首页</span>
-                            <span class="at-item en">HOME</span>
-                        </a>
-                    </li>
-                    <li class="li2">
-                        <a href="achievement.html" class="hvr-grow">
-                            <span class="at-item ch">成果</span>
-                            <span class="at-item en">ACHIEVEMENT</span>
-                        </a>
-                    </li>
-                    <li class="li2">
-                        <a id="about" href="about.html" class="hvr-grow">
-                            <span class="at-item ch">关于</span>
-                            <span class="at-item en">ABOUT</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- navigation  end -->
-    </div>
-    <!--    con-right-->
-    <div class="con-right">
-        <button id="choice-language" onclick="changeLanguage()" class="choice-language choice-ch">
-            <span>Ch</span>
-            <span>En</span>
-        </button>
+        <!--    con-right-->
+        <div class="con-right">
+            <button id="choice-language" onclick="changeLanguage()" class="choice-language choice-ch">
+                <span>Ch</span>
+                <span>En</span>
+            </button>
 
+        </div>
+        <!--    con-right end-->
     </div>
-    <!--    con-right end-->
+    <!-- content end-->
 </div>
-<!-- content end-->
+
 <script type="text/javascript">
     //获取
     const cookie = document.cookie;

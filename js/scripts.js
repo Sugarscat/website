@@ -70,17 +70,17 @@ function hasClass( elements,cName ){
 }
 // 语言切换
 function changeLanguage(){
-    const co = document.getElementById("changeLanguage");
+    const cl = document.getElementById("changeLanguage");
     const btn = document.getElementById("choice-language");
-    if (!hasClass(co, "en")){
+    if (!hasClass(cl, "en")){
         //储存
         document.cookie = "en";
-        co.className = "content en";
+        cl.className = "main en";
         btn.className="choice-language choice-en";
     }
     else {
         document.cookie = "ch";
-        co.className = "content ch";
+        cl.className = "main ch";
         btn.className="choice-language choice-ch";
     }
 }
