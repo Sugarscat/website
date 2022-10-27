@@ -316,14 +316,13 @@ header{
     header{
 
     }
+    .headMenu .logo-ach{
+        padding: 0 0 0 20px;
+    }
 
     .headMenu nav
     {
         display: none;
-    }
-
-    .headMenu .choice-language{
-
     }
 
     .navbar{
@@ -342,7 +341,7 @@ header{
         /* 鼠标移入边小手 */
         cursor: pointer;
         position: absolute;
-        right: 40px;
+        right: 20px;
     }
     .headMenu label .container {
         /* 相对定位 按照自己的本身位置移动,不会影响父盒子 */
@@ -414,7 +413,7 @@ header{
         z-index: 1;
         position: absolute;
         top: 15px;
-        right: 80px;
+        right: 60px;
         border-radius: 10px;
         box-shadow: 5px 5px 5px #969696;
     }
