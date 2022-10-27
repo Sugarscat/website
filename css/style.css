@@ -485,4 +485,10 @@ header{
     }
 
     /*index.html*/
+    .content-i{
+        display: none;
+    }
+    header{
+        display: flex;
+    }
 }
