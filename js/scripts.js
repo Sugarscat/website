@@ -6,7 +6,7 @@ body.style.overflow="hidden"
 window.document.body.appendChild(canvas)
 canvas.width = window.innerWidth
 canvas.height=window.innerHeight
-canvas.setAttribute('style','position:absolute;left:0;top:0;pointer-events:none;')
+canvas.setAttribute('style','position:absolute;left:0;top:0;pointer-events:none;z-index:99')
 const clicks = [];
 const points = []; //定义粒子数组
 const live = 50; //存活50个周期
@@ -17,7 +17,7 @@ const colors = [  //备选粒子颜色数组
     "123, 237, 159"
 ];
 window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
-    for (let i = 0; i < 3; i++) { //添加15个粒子
+    for (let i = 0; i < 1; i++) { //添加15个粒子
         points.push({
             sx: evt.x, //鼠标当前坐标作为粒子坐标
             sy: evt.y,
@@ -79,15 +79,18 @@ function hasClass( elements,cName ){
 function changeLanguage(){
     const cl = document.getElementById("changeLanguage");
     const btn = document.getElementById("choice-language");
+    const btn2 = document.getElementById("choice-language2");
     if (!hasClass(cl, "en")){
         //储存
         document.cookie = "en";
         cl.className = "main en";
         btn.className="choice-language choice-en";
+        btn2.className="choice-language2 choice-en2";
     }
     else {
         document.cookie = "ch";
         cl.className = "main ch";
         btn.className="choice-language choice-ch";
+        btn2.className="choice-language2 choice-ch2";
     }
 }

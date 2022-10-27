@@ -177,17 +177,17 @@ header{
     padding: 0 30px 0 40px;
 }
 
-.headMenu ul{
+.headMenu nav ul{
     padding: 0;
     display: flex;
     flex-direction: row;
 }
 
-.headMenu li {
+.headMenu nav li {
     display: inline;
 }
 
-.headMenu ul a {
+.headMenu nav ul a {
     height: 60px;
     width: 115px;
     font-size: 16px;
@@ -199,7 +199,7 @@ header{
     justify-content: center;
 }
 
-.headMenu .active {
+.headMenu nav .active {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #181818;
@@ -226,13 +226,12 @@ header{
     position: absolute;
     width: 22px;
     height: 22px;
-}
-
-.headMenu .choice-en::before{
+    top: 1.5px;
     animation: switch-ach 0.35s forwards;
 }
 
-.headMenu .donate{
+
+.headMenu nav .donate{
     width: 200px;
 }
 
@@ -268,6 +267,17 @@ header{
     }
 }
 
+.navbar{
+    display: none;
+}
+
+.headMenu #toggle {
+    /* 让复选框隐藏 */
+    display: none;
+}
+
+
+
 /*achievement.html*/
 
 
@@ -290,6 +300,9 @@ header{
     flex-direction: column;
     justify-content: center;
 }
+.socialNetworkNavBar{
+    padding: 5px 0 0 0;
+}
 .socialNetworkNavBar a{
     padding: 5px 5px 0 5px;
 }
@@ -304,10 +317,173 @@ header{
 
     }
 
-    .headMenu nav,
-    .headMenu .choice-language
+    .headMenu nav
     {
         display: none;
     }
+
+    .headMenu .choice-language{
+
+    }
+
+    .navbar{
+        display: flex;
+    }
+
+    .navbar span{
+        color: black;
+    }
+
+    .headMenu label {
+        /* 将行内元素label转为块级元素 ,不然无法设置宽和高 */
+        display: block;
+        width: 48px;
+        height: 48px;
+        /* 鼠标移入边小手 */
+        cursor: pointer;
+        position: absolute;
+        right: 40px;
+    }
+    .headMenu label .container {
+        /* 相对定位 按照自己的本身位置移动,不会影响父盒子 */
+        position: relative;
+        top: 17px;
+        left: 14px;
+        width: 20px;
+        height: 20px;
+    }
+    .headMenu label .container span {
+        /* 先让两个重叠在一起 */
+        position: relative;
+        top: 0;
+        /* 还是一样转为块级元素 设置宽和高 */
+        display: block;
+        height: 1px;
+        background-color: #181818;
+        /* 在设置取消选中的过渡时间 */
+        /* 反之 */
+        transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+    }
+    /* 设置第二条线 */
+    .headMenu label .container span:nth-child(2) {
+        top: 10px;
+    }
+
+    .headMenu label .container span:nth-child(3) {
+        top: 4px;
+    }
+    /* 设置转换 */
+    /* + 是相邻兄弟选择器 找相邻的label */
+    .headMenu #toggle:checked + label .container span:nth-child(1) {
+        top: 5px;
+        /* 顺时针旋转45度 */
+        transform: rotate(45deg);
+        /* 现在很生硬,设置过渡时间 */
+        /* 这个是先执行top这个属性,然后0.2s后执行旋转 */
+        transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+    }
+    /* 选中后的第二条线 */
+    .headMenu #toggle:checked + label .container span:nth-child(2) {
+        top: 5px;
+        /* 逆时针旋转45度 */
+        transform: rotate(-45deg);
+        transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+    }
+
+    .headMenu #toggle:checked + label .container span:nth-child(3) {
+        display: none;
+    }
+
+    .headMenu .navbar ul {
+        width: 100px;
+        /* 内边距 */
+        padding: 10px 60px 20px 20px;
+        /* 基本框架搭建完了 */
+        /* 在做下拉的菜单栏的转换 */
+        /* 缩放到0 就是没有 */
+        transform: scaleY(0);
+        /* 设置过渡时间 */
+        transition: all 0.4s ease-in-out;
+        /* 现在是中间缩放 我们需要从上面下来 我们设置缩放中心点 */
+        /* 写这个值就是从最上面的中间开始缩放和放大,得到下拉的效果 */
+        transform-origin: 50% 0;
+        background-color: #ffecec;
+        /* 然后在设置一下透明度 达到更好的视觉效果 */
+        /* 起初是全透明 */
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        top: 15px;
+        right: 80px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #969696;
+    }
+
+    .headMenu .navbar ul li {
+        padding: 0;
+        /* 取消小圆点 */
+        height: 40px;
+        width: 140px;
+        list-style: none;
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .headMenu .navbar .active {
+        background: #f3a8a8;
+    }
+
+    .navbar .li{
+        overflow: hidden;
+    }
+
+    .navbar li a {
+        padding: 0 0 0 5px;
+        height: 30px;
+        width: 150px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .navbar li a:hover{
+        background: #A1E6FA;
+    }
+
+    .headMenu .choice-language{
+        display: none;
+    }
+
+    .headMenu .choice-language2{
+        position: absolute;
+        right: 20px;
+    }
+
+    .headMenu .navbar .choice-ch2::before{
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        left: 1px;
+        top: 0.8px;
+    }
+
+    .headMenu .choice-en2::before{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 1px;
+        top: 0.8px;
+    }
+
+
+    .headMenu #toggle:checked ~ .navbar ul{
+        transform: scaleY(1);
+        /* 选中后是不透明 */
+        opacity: 1;
+    }
+
     /*index.html*/
 }

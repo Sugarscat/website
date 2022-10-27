@@ -14,6 +14,7 @@
   display: none;
 }
 
+.choice-language2,
 .choice-language{
   height: 32px;
   width: 60px;
@@ -29,6 +30,7 @@
   font-family: alliewriting, serif;
 }
 
+.choice-language2::before,
 .choice-language::before{
   content: "";
   border-radius: 50%;
@@ -720,13 +722,30 @@ div.at-container {
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
-  /* shorthand
-  animation: focus-in-contract 1s ease 0s 1 normal none;
-  */
 }
 @keyframes focus-in-contract {
   0%{
     letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100%{
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.at-item2 {
+  animation-name: focus-in-contract2;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes focus-in-contract2 {
+  0%{
     filter: blur(12px);
     opacity: 0;
   }
