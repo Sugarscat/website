@@ -397,13 +397,10 @@ header{
         width: 140px;
         /* 内边距 */
         padding: 10px 20px 20px 20px;
-        /* 基本框架搭建完了 */
-        /* 在做下拉的菜单栏的转换 */
         /* 缩放到0 就是没有 */
         transform: scaleY(0);
         /* 设置过渡时间 */
         transition: all 0.4s ease-in-out;
-        /* 现在是中间缩放 我们需要从上面下来 我们设置缩放中心点 */
         /* 写这个值就是从最上面的中间开始缩放和放大,得到下拉的效果 */
         transform-origin: 50% 0;
         background-color: #ffecec;
