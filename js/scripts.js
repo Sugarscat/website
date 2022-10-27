@@ -1,68 +1,75 @@
-// 鼠标跟随动画
+// 鼠标动画特效绘制
 const canvas = document.createElement("canvas");
-// 设置画布样式和鼠标点击穿透
-canvas.style.position = "fixed"
-canvas.style.pointerEvents = "none"
-canvas.style.top = "0"
-canvas.style.left = "0"
-canvas.style.zIndex = "99"
+const ctx = canvas.getContext("2d");
+const body = document.body;
+body.style.overflow="hidden"
+window.document.body.appendChild(canvas)
 canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-document.body.append(canvas)
-const ctx = canvas.getContext("2d")
-const particlesArray = []
-// 粒子类
-class Particle{
-    // 输入参数为粒子的生成坐标
-    constructor(x,y) {
-        this.x = x
-        this.y = y
-        this.color = Math.random() * 255 | 0
-        this.vx = 0.5 - Math.random()
-        this.vy = 0.5 - Math.random()
-        // 随机寿命
-        this.age = Math.random() * 100 | 0
+canvas.height=window.innerHeight
+canvas.setAttribute('style','position:absolute;left:0;top:0;pointer-events:none;')
+const clicks = [];
+const points = []; //定义粒子数组
+const live = 50; //存活50个周期
+const colors = [  //备选粒子颜色数组
+    "236, 204, 104",
+    "255, 71, 87",
+    "112, 161, 255",
+    "123, 237, 159"
+];
+window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
+    for (let i = 0; i < 3; i++) { //添加15个粒子
+        points.push({
+            sx: evt.x, //鼠标当前坐标作为粒子坐标
+            sy: evt.y,
+            vx: 0.5 - Math.random(), //x轴及y轴的移动向量，取值范围为-0.5 ~ 0.5
+            vy: 0.5 - Math.random(),
+            life: live, //存活周期
+            color: colors[parseInt(Math.random() * colors.length)], //随机选择颜色
+            size: Math.random() * 5 //随机粒子尺寸，取值范围为0~5
+        })
     }
-    // 更新位置
-    update() {
-        this.x = this.vx
-        this.y = this.vy
-        this.vy += 0.01
-        this.age--
-        this.color++
-    }
-    draw() {
+})
+window.addEventListener("click",function(evt){ //监听点击事件
+    clicks.push({
+        sx:evt.x,
+        sy:evt.y,
+        color:colors[parseInt(Math.random() * colors.length)],
+        life:live
+    })
+})
+function drawPoints() { //绘制粒子
+    ctx.clearRect(0, 0, canvas.width, canvas.height) //清屏
+    for (let i = 0; i < points.length; i++) { //遍历粒子
+        let point = points[i] //定义单个粒子
         ctx.beginPath()
-        ctx.fillStyle = "hsl(" + this.color % 255 + "deg,50%,50%)"
-        ctx.arc(this.x, this.y, this.color%3, Math.PI*2, false)
-        ctx.fill()
-    }
-}
-//让粒子浮动
-function  draw() {
-    // 清空画布
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-    // 循环生成粒子
-    for(let i = 0; i < particlesArray.length; i++){
-        let pix = particlesArray[i]
-        pix.update()
-        pix.draw()
-        // 无寿命清除
-        if (pix.age < 0){
-            particlesArray.splice(i, 1)
+        ctx.arc(point.sx, point.sy, point.size, Math.PI * 2, false) //根据粒子属性画圆
+        ctx.fillStyle = "rgba(" + point.color + "," + point.life / live + ")" //根据粒子属性设置填充颜色及透明度
+        ctx.fill() //填充颜色
+        point.life-- //生命值减1
+        if (point.life <= 0) { //生命值为0则从粒子数组中删除
+            points.splice(i, 1)
         }
+        point.sx += point.vx * 3  //根据向量值改变粒子位置
+        point.sy += point.vy * 3
+    }
+    for(let i=0; i<clicks.length; i++){ //绘制点击效果
+        let click = clicks[i]
+        ctx.beginPath()
+        ctx.arc(click.sx, click.sy, live - click.life, Math.PI * 2, false)
+        ctx.fillStyle="rgba(" + click.color + "," + click.life / live + ")"
+        ctx.fill()
+        click.life--
+        if(click.life<=0){
+            clicks.splice(i,1)
+        }
+
     }
 }
-setInterval(draw, 10) // 定时运行
-// 绑定鼠标事件
-window.addEventListener("mousemove", function (evt){
-    for (let i = 0; i < 10; i++) {
-        particlesArray.push(new Particle(evt.x, evt.y))
-    }
-})
-window.addEventListener("click", function (evt){
+setInterval(drawPoints, 20) //20毫秒绘制一次
+// 事件绑定
+window.addEventListener("mousemove", function(evt) {})
 
-})
+window.addEventListener("click", function(evt) {})
 
 // 检测是否有类名
 function hasClass( elements,cName ){
