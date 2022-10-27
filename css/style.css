@@ -201,7 +201,9 @@ header{
 }
 
 .headMenu .active {
-    box-shadow: 0 1px 0 0 #181818;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #181818;
 }
 
 .headMenu .choice-language{
@@ -299,5 +301,14 @@ header{
 
 /*phone*/
 @media screen and (max-width: 950px){
+    header{
+
+    }
+
+    .headMenu nav,
+    .headMenu .choice-language
+    {
+        display: none;
+    }
     /*index.html*/
 }
