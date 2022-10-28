@@ -38,6 +38,8 @@ window.addEventListener("click",function(evt){ //监听点击事件
     })
 })
 function drawPoints() { //绘制粒子
+    canvas.width = window.innerWidth
+    canvas.height=window.innerHeight
     ctx.clearRect(0, 0, canvas.width, canvas.height) //清屏
     for (let i = 0; i < points.length; i++) { //遍历粒子
         let point = points[i] //定义单个粒子
@@ -69,4 +71,6 @@ setInterval(drawPoints, 20) //20毫秒绘制一次
 // 事件绑定
 window.addEventListener("mousemove", function(evt) {})
 
-window.addEventListener("click", function(evt) {})
+window.addEventListener("click", function(evt) {
+    
+})
