@@ -56,12 +56,6 @@ window.addEventListener("click",function(evt){ //监听点击事件
     })
     changeCheckbox();
 })
-window.addEventListener("DOMContentLoaded",function(evt){ //监听滚轮事件
-    changeCheckbox();
-})
-window.addEventListener("onmousewheel",function(evt){ //监听滚轮事件
-    changeCheckbox();
-})
 
 // 收回导航栏
 function changeCheckbox() {
