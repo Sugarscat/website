@@ -48,20 +48,25 @@ window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
     }
 })
 window.addEventListener("click",function(evt){ //监听点击事件
-    const bc = document.getElementById("toggle")
     clicks.push({
         sx:evt.x,
         sy:evt.y,
         color:colors[parseInt(Math.random() * colors.length)],
         life:live
     })
+    changeCheckbox();
+})
+
+function changeCheckbox() {
+    const bc = document.getElementById("toggle")
     const e = event || window.event;
     let x = e.clientX;
     let y = e.clientY;
     if (!(x >= winWidth - 240 && y <= 240))
         if (bc.checked)
             bc.checked = false;
-})
+}
+
 function drawPoints() {
     //绘制粒子
     canvas.width = window.innerWidth
