@@ -67,7 +67,7 @@ function changeCheckbox() {
     const e = event || window.event;
     let x = e.clientX;
     let y = e.clientY;
-    if (!(x >= winWidth - 240 && y <= 240))
+    if (!(x >= winWidth - 240  && y <= 240))
         if (bc.checked)
             bc.checked = false;
 }
