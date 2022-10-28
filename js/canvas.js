@@ -35,7 +35,7 @@ const colors = [  //备选粒子颜色数组
     "123, 237, 159"
 ];
 window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
-    for (let i = 0; i < 1; i++) { //添加15个粒子
+    for (let i = 0; i < 1; i++) { //添加2个粒子
         points.push({
             sx: evt.x, //鼠标当前坐标作为粒子坐标
             sy: evt.y,
@@ -56,7 +56,14 @@ window.addEventListener("click",function(evt){ //监听点击事件
     })
     changeCheckbox();
 })
+window.addEventListener("DOMContentLoaded",function(evt){ //监听滚轮事件
+    changeCheckbox();
+})
+window.addEventListener("onmousewheel",function(evt){ //监听滚轮事件
+    changeCheckbox();
+})
 
+// 收回导航栏
 function changeCheckbox() {
     const bc = document.getElementById("toggle")
     const e = event || window.event;
@@ -66,9 +73,8 @@ function changeCheckbox() {
         if (bc.checked)
             bc.checked = false;
 }
-
+//绘制粒子
 function drawPoints() {
-    //绘制粒子
     canvas.width = window.innerWidth
     canvas.height=window.innerHeight
     ctx.clearRect(0, 0, canvas.width, canvas.height) //清屏
