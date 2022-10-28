@@ -170,6 +170,7 @@ body {
 }
 
 /*header 公用*/
+
 header{
     height: 150px;
     width: 100%;
@@ -299,7 +300,7 @@ header{
     flex-direction: row;
     flex-flow: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .personalPhoto{
@@ -311,6 +312,7 @@ header{
 }
 
 .identityDetails{
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -332,6 +334,7 @@ header{
     justify-content: center;
     backdrop-filter: blur(8px);
     background: #a0c5d8;
+    margin: 20px;
 }
 
 .showAchievements ul{
@@ -355,6 +358,10 @@ header{
 .links {
     padding: 5px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .links ul {
@@ -362,6 +369,7 @@ header{
     align-items: center;
     flex-direction: row;
     flex-flow: wrap;
+    justify-content: center;
 }
 
 .links ul li {
@@ -395,6 +403,53 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+/*donate*/
+.biliDonate{
+    margin: 20px 0;
+    padding: 20px 0;
+    width: 100%;
+    min-width: 350px;
+    background-color: #a0c5d8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biliDonate span{
+    margin: 0 20px;
+}
+
+.biliDonate ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.biliVideo li{
+    height: 150px;
+    width: 300px;
+    list-style: none;
+    background-color: #cde9f4;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.biliVideo iframe{
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+}
+
+.biliVideo a{
+    padding: 0 20px;
 }
 
 /*phone*/
