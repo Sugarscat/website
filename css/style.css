@@ -135,6 +135,7 @@ body {
 }
 
 .con-right .choice-en::before{
+    position: absolute;
     animation: switch 0.35s forwards;
 }
 
