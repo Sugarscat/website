@@ -331,7 +331,7 @@ header{
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(8px);
-    background: rgba(114, 176, 204, 0.35);
+    background: #a0c5d8;
 }
 
 .showAchievements ul{
@@ -380,17 +380,21 @@ header{
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     border-radius: 10px;
     border: 2px ridge #0f6baa;
     color: black;
     background-color: #ffffff;
 }
 
+.links img{
+    padding: 0 20px;
+}
+
 .links .fAbout{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /*phone*/
