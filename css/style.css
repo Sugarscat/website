@@ -111,6 +111,7 @@ body {
     align-items: flex-end;
     justify-content: space-between;
     transition: all 0.25s ease-in;
+    position: relative;
 }
 
 /*choice-language*/
@@ -182,6 +183,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
 }
 
 .headMenu .logo-ach{
