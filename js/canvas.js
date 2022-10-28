@@ -1,21 +1,24 @@
 // 获取窗口宽度
 let winWidth;
 let winHeight;
-if (window.innerWidth)
-    winWidth = window.innerWidth;
-else if ((document.body) && (document.body.clientWidth))
-    winWidth = document.body.clientWidth;
+function getWinSize() {
+    if (window.innerWidth)
+        winWidth = window.innerWidth;
+    else if ((document.body) && (document.body.clientWidth))
+        winWidth = document.body.clientWidth;
 // 获取窗口高度
-if (window.innerHeight)
-    winHeight = window.innerHeight;
-else if ((document.body) && (document.body.clientHeight))
-    winHeight = document.body.clientHeight;
+    if (window.innerHeight)
+        winHeight = window.innerHeight;
+    else if ((document.body) && (document.body.clientHeight))
+        winHeight = document.body.clientHeight;
 // 通过深入 Document 内部对 body 进行检测，获取窗口大小
-if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
-{
-    winHeight = document.documentElement.clientHeight;
-    winWidth = document.documentElement.clientWidth;
+    if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+    {
+        winHeight = document.documentElement.clientHeight;
+        winWidth = document.documentElement.clientWidth;
+    }
 }
+
 // 鼠标动画特效绘制
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
@@ -35,6 +38,7 @@ const colors = [  //备选粒子颜色数组
     "123, 237, 159"
 ];
 window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
+    getWinSize();
     for (let i = 0; i < 1; i++) { //添加2个粒子
         points.push({
             sx: evt.x, //鼠标当前坐标作为粒子坐标
