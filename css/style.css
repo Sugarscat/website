@@ -372,7 +372,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .links ul li a{
@@ -386,6 +385,7 @@ header{
     border-radius: 10px;
     border: 2px ridge #0f6baa;
     color: black;
+    background-color: #ffffff;
 }
 
 .links .fAbout{
