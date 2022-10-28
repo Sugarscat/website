@@ -1,11 +1,29 @@
+// 获取窗口宽度
+let winWidth;
+let winHeight;
+if (window.innerWidth)
+    winWidth = window.innerWidth;
+else if ((document.body) && (document.body.clientWidth))
+    winWidth = document.body.clientWidth;
+// 获取窗口高度
+if (window.innerHeight)
+    winHeight = window.innerHeight;
+else if ((document.body) && (document.body.clientHeight))
+    winHeight = document.body.clientHeight;
+// 通过深入 Document 内部对 body 进行检测，获取窗口大小
+if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+{
+    winHeight = document.documentElement.clientHeight;
+    winWidth = document.documentElement.clientWidth;
+}
 // 鼠标动画特效绘制
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 const body = document.body;
-body.style.overflow="hidden"
-window.document.body.appendChild(canvas)
-canvas.width = window.innerWidth
-canvas.height=window.innerHeight
+body.style.overflow="hidden";
+window.document.body.appendChild(canvas);
+canvas.width = winWidth;
+canvas.height= winHeight;
 canvas.setAttribute('style','position:absolute;left:0;top:0;pointer-events:none;z-index:99')
 const clicks = [];
 const points = []; //定义粒子数组
@@ -30,14 +48,22 @@ window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
     }
 })
 window.addEventListener("click",function(evt){ //监听点击事件
+    const bc = document.getElementById("toggle")
     clicks.push({
         sx:evt.x,
         sy:evt.y,
         color:colors[parseInt(Math.random() * colors.length)],
         life:live
     })
+    const e = event || window.event;
+    let x = e.clientX;
+    let y = e.clientY;
+    if (!(x >= winWidth - 240 && y <= 240))
+        if (bc.checked)
+            bc.checked = false;
 })
-function drawPoints() { //绘制粒子
+function drawPoints() {
+    //绘制粒子
     canvas.width = window.innerWidth
     canvas.height=window.innerHeight
     ctx.clearRect(0, 0, canvas.width, canvas.height) //清屏
@@ -68,9 +94,3 @@ function drawPoints() { //绘制粒子
     }
 }
 setInterval(drawPoints, 20) //20毫秒绘制一次
-// 事件绑定
-window.addEventListener("mousemove", function(evt) {})
-
-window.addEventListener("click", function(evt) {
-    
-})
