@@ -285,6 +285,8 @@ header{
 .selfIntroduction{
     display: flex;
     flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
 }
 
 .personalPhoto{
@@ -305,6 +307,37 @@ header{
 }
 .socialNetworkNavBar a{
     padding: 5px 5px 0 5px;
+}
+
+.showAchievements{
+    height: 150px;
+    width: 350px;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    background: rgba(114, 176, 204, 0.35);
+}
+
+.showAchievements ul{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.showAchievements li{
+    list-style: none;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .links li {
@@ -429,10 +462,6 @@ header{
 
     .headMenu .navbar .active {
         background: #f3a8a8;
-    }
-
-    .navbar .li{
-        overflow: hidden;
     }
 
     .navbar li a {
