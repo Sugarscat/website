@@ -410,7 +410,7 @@ header{
     margin: 20px 0;
     padding: 20px 0;
     width: 100%;
-    min-width: 350px;
+    min-width: 300px;
     background-color: #a0c5d8;
     border-radius: 10px;
     display: flex;
@@ -432,7 +432,7 @@ header{
 
 .biliVideo li{
     height: 150px;
-    width: 300px;
+    width: 260px;
     list-style: none;
     background-color: #cde9f4;
     margin: 20px;
@@ -446,10 +446,6 @@ header{
     height: 100px;
     width: 200px;
     margin: 10px;
-}
-
-.biliVideo a{
-    padding: 0 20px;
 }
 
 /*phone*/
