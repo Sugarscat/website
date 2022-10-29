@@ -249,7 +249,7 @@ header{
 }
 
 .mainContent{
-    padding: 0 40px 0 40px;
+    padding: 0 40px;
 }
 
 @keyframes switch-ach {
@@ -609,11 +609,14 @@ header{
         top: 0.8px;
     }
 
-
     .headMenu #toggle:checked ~ .navbar ul{
         transform: scaleY(1);
         /* 选中后是不透明 */
         opacity: 1;
+    }
+
+    .mainContent{
+        padding: 0 40px;
     }
 
     /*index.html*/
