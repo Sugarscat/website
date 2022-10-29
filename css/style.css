@@ -7,9 +7,10 @@ body {
     background-color: #ffffff;
     width: 100%;
     height: 100vh;
+    overflow: auto ! important;
 }
 
-.Scroll-to-top{
+.scrollTop{
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -51,12 +52,6 @@ body {
 
 .STKAITI{
     font-family: STKAITI, serif;
-}
-
-.main{
-    width: 100%;
-    height: 100%;
-    overflow: auto;
 }
 
 /* content-i */

@@ -21,3 +21,11 @@ function changeLanguage(){
         btn2.className="choice-language2 choice-ch2";
     }
 }
+// 回到顶部
+function scrollToTop(){
+    window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        }
+    )
+}
