@@ -18,7 +18,7 @@ canvas.height= document.body.clientHeight - 1 + addWidth;
 canvas.setAttribute('style','position:absolute;left:0;top:0;pointer-events:none;z-index:99')
 
 window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
-    for (let i = 0; i < 1; i++) { //添加2个粒子
+    for (let i = 0; i < 3; i++) { //添加2个粒子
         points.push({
             sx: evt.x, //鼠标当前坐标作为粒子坐标
             sy: evt.y,
@@ -81,4 +81,4 @@ function drawPoints() {
         }
     }
 }
-setInterval(drawPoints, 20) //20毫秒绘制一次
+setInterval(drawPoints, 10) //20毫秒绘制一次
