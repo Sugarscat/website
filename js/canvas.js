@@ -17,6 +17,7 @@ canvas.width = document.body.clientWidth - 1;
 canvas.height= document.body.clientHeight - 1 + addWidth;
 canvas.setAttribute('style','position:absolute;left:0;top:0;pointer-events:none;z-index:99')
 
+/*
 window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
     for (let i = 0; i < 3; i++) { //添加2个粒子
         points.push({
@@ -30,6 +31,8 @@ window.addEventListener("mousemove", function (evt) { //监听鼠标移动事件
         })
     }
 })
+*/
+
 window.addEventListener("click",function(evt){ //监听点击事件
     clicks.push({
         sx:evt.x,
