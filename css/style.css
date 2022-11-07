@@ -242,7 +242,7 @@ header{
     height: 22px;
     position: absolute;
     right: 28.5px;
-    top: 1.5px;
+    top: 1px;
     animation: switch-reverse-ach 0.35s forwards;
 }
 
@@ -251,7 +251,7 @@ header{
     position: absolute;
     width: 22px;
     height: 22px;
-    top: 1.5px;
+    top: 1px;
     animation: switch-ach 0.35s forwards;
 }
 
@@ -274,13 +274,13 @@ header{
         height: 16px;
     }
     100% {
-        right: 1.5px;
+        right: 1px;
     }
 }
 
 @keyframes switch-reverse-ach {
     0% {
-        right: 1.5px;
+        right: 1px;
     }
     60% {
         right: 15.6px;
