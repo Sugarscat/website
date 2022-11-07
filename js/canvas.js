@@ -84,4 +84,4 @@ function drawPoints() {
         }
     }
 }
-setInterval(drawPoints, 10) //20毫秒绘制一次
+setInterval(drawPoints, 1) //20毫秒绘制一次
