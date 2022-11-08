@@ -304,7 +304,30 @@ header{
 
 
 /*achievement.html*/
+.wantShow {
+    display: flex;
+    justify-content: center;
+}
 
+.wantShow ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.wantShow li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.wantShow .paintings,
+.wantShow .videos,
+.wantShow .software,
+.wantShow .repositories{
+    width: 900px;
+    height: 500px;
+    background-color: #c2e9f6;
+    border-radius: 10px;
+}
 
 /*about.html*/
 .selfIntroduction{
