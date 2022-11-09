@@ -15,6 +15,7 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/canvas.js" defer></script>
+    <script type="text/javascript" src="js/action.js" defer></script>
 </head>
 <body>
 <div class="scrollTop" onclick="scrollToTop()">
@@ -110,43 +111,47 @@
     <!--  header end-->
     <main class="mainContent">
         <div class="wantShow">
-            <ul>
-                <li><div class="paintings">
+           <div class="paintings">
+               <div class="title">
 
-                </div></li>
-                <li><div class="videos">
+               </div>
+               <div class="separator">
 
-                </div></li>
-                <li><div class="software">
+               </div>
+               <ul>
+                   <li>
+                       <img src="images/1.jpg" alt="" />
+                       <p>玩具总动员</p>
+                   </li>
+                   <li>
+                       <img src="images/2.jpg" alt="" />
+                       <p>汽车总动员</p>
+                   </li>
+                   <li>
+                       <img src="images/3.jpg" alt="" />
+                       <p>仙境的彼方</p>
+                   </li>
+                   <li>
+                       <img src="images/4.jpg" alt="" />
+                       <p>飞屋环游记</p>
+                   </li>
+                   <li>
+                       <img src="images/5.jpg" alt="" />
+                       <p>机器人总动员</p>
+                   </li>
+               </ul>
+           </div>
+            <div class="videos">
 
-                </div></li>
-                <li><div class="repositories">
+            </div>
+            <div class="software">
 
-                </div></li>
-            </ul>
+            </div>
+            <div class="repositories">
+
+            </div>
         </div>
     </main>
 </div>
-
-
-
-<script type="text/javascript">
-    //获取
-    const cookie = document.cookie;
-    if (cookie === "en"){
-        changeLanguage();
-    }
-    // 回到顶部
-    $(document).ready(function () {
-        $(".scrollTop").fadeOut();
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 200){
-                $(".scrollTop").fadeIn();
-            }else {
-                $(".scrollTop").fadeOut();
-            }
-        });
-    });
-</script>
 </body>
 </html>

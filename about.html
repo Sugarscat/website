@@ -15,6 +15,7 @@
     <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/canvas.js" defer></script>
+    <script type="text/javascript" src="js/action.js" defer></script>
 </head>
 <body>
 <div class="scrollTop" onclick="scrollToTop()">
@@ -245,23 +246,5 @@
         </div>
     </main>
 </div>
-<script type="text/javascript">
-    //获取
-    const cookie = document.cookie;
-    if (cookie === "en"){
-        changeLanguage();
-    }
-    // 回到顶部
-    $(document).ready(function () {
-        $(".scrollTop").fadeOut();
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 200){
-                $(".scrollTop").fadeIn();
-            }else {
-                $(".scrollTop").fadeOut();
-            }
-        });
-    });
-</script>
 </body>
 </html>
