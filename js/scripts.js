@@ -29,3 +29,16 @@ function scrollToTop(){
         }
     )
 }
+// 修改头图大小
+function changePictureWidth(){
+    const pictureWidth = document.body.clientWidth;
+    const hp = document.getElementById("headPicture");
+    const hp2 = document.getElementById("headPicture2");
+    if (pictureWidth >= 950){
+        hp.width = pictureWidth;
+    }
+    if (pictureWidth <= 950){
+        hp2.width = pictureWidth;
+    }
+}
+setInterval(changePictureWidth, 1) //20毫秒绘制一次
