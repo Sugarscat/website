@@ -654,7 +654,7 @@ header .head-picture {
         top: 15px;
         right: 60px;
         border-radius: 10px;
-        box-shadow: 5px 5px 5px #969696;
+        box-shadow: 2px 2px 2px #969696;
     }
 
     .headMenu .navbar ul li {
