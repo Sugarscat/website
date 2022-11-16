@@ -30,16 +30,16 @@ body {
 /*font*/
 @font-face {
     font-family: alliewriting;
-    src: url("font/alliewriting.ttf");
+    src: url("css/font/alliewriting.ttf");
 }
 @font-face {
     font-family: STHeiti-Light;
-    src: url("font/STHeiti-Light.ttc");
+    src: url("css/font/STHeiti-Light.ttc");
 }
 
 @font-face {
     font-family: STKAITI;
-    src: url("font/STKAITI.ttf");
+    src: url("css/font/STKAITI.ttf");
 }
 
 .STHeiti-Light {
@@ -186,7 +186,7 @@ body {
 header{
     height: 150px;
     width: 100%;
-    background-color: #c2e9f6;
+    background: url("img/header.png");
 }
 
 .headMenu{
@@ -261,7 +261,7 @@ header{
 }
 
 .mainContent{
-    padding: 0 40px;
+    padding:40px;
 }
 
 @keyframes switch-ach {
@@ -325,7 +325,7 @@ header{
 }
 
 .wantShow .paintings{
-    margin: 40px 0 20px 0;
+
 }
 
 .wantShow .paintings .title{
@@ -394,7 +394,6 @@ header{
     flex-flow: wrap;
     align-items: center;
     justify-content: center;
-    margin: 40px 0 0 0;
 }
 
 .personalPhoto{
@@ -501,7 +500,6 @@ header{
 
 /*donate*/
 .biliDonate{
-    margin: 40px 0;
     padding: 20px 0;
     width: 100%;
     min-width: 300px;
@@ -710,7 +708,7 @@ header{
     }
 
     .mainContent{
-        padding: 0 20px;
+        padding: 20px;
     }
 
     /*index.html*/
