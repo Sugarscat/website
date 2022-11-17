@@ -41,4 +41,4 @@ function changePictureWidth(){
         hp2.width = pictureWidth;
     }
 }
-setInterval(changePictureWidth, 1) //20毫秒绘制一次
+setInterval(changePictureWidth, 20) //20毫秒绘制一次
