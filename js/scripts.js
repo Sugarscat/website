@@ -42,3 +42,18 @@ function changePictureWidth(){
     }
 }
 setInterval(changePictureWidth, 20) //20毫秒绘制一次
+
+// 检测元素是否可视
+function isInViewPort(e){
+    //方法1
+    const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    const offsetTop = e.offsetTop;
+    const scrollTop = document.documentElement.scrollTop;
+    return offsetTop-scrollTop <= viewPortHeight
+
+    // 方法2
+    // const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    // const viewPortWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    // const {top,right,left,bottom} = e.getBoundingClientRect();
+    // return top >= 0 && left >= 0 && bottom <= viewPortHeight && right <= viewPortWidth
+}

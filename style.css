@@ -42,6 +42,11 @@ body {
     src: url("css/font/STKAITI.ttf");
 }
 
+@font-face {
+    font-family: SmileySans-Oblique;
+    src: url("css/font/SmileySans-Oblique.ttf");
+}
+
 .STHeiti-Light {
     font-family: STHeiti-Light, serif;
 }
@@ -52,6 +57,10 @@ body {
 
 .STKAITI{
     font-family: STKAITI, serif;
+}
+
+.SmileySans-Oblique {
+    font-family: SmileySans-Oblique, serif;
 }
 
 /* content-i */
@@ -475,6 +484,7 @@ header .head-picture {
     flex-direction: row;
     flex-flow: wrap;
     justify-content: center;
+    overflow: hidden;
 }
 
 .links ul li {
@@ -514,11 +524,13 @@ header .head-picture {
     padding: 20px 0;
     width: 100%;
     min-width: 300px;
-    background-color: #a0c5d8;
+    background-image: linear-gradient(to left top, #ddeef8, #d7ecf9, #d0ebfa, #cae9fa, #c3e7fb,
+                        #bee6fb, #bae5fb, #b5e4fb, #b1e4fa, #ade4f8, #aae3f7, #a6e3f5);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .biliDonate span{
@@ -537,7 +549,7 @@ header .head-picture {
     height: 150px;
     width: 260px;
     list-style: none;
-    background-color: #cde9f4;
+    background-color: #77c4e2;
     margin: 20px;
     border-radius: 10px;
     display: flex;
@@ -701,7 +713,7 @@ header .head-picture {
         height: 22px;
         position: absolute;
         left: 1px;
-        top: 0.8px;
+        top: 1px;
     }
 
     .headMenu .choice-en2::before{
@@ -709,7 +721,7 @@ header .head-picture {
         width: 22px;
         height: 22px;
         right: 1px;
-        top: 0.8px;
+        top: 1px;
     }
 
     .headMenu #toggle:checked ~ .navbar ul{

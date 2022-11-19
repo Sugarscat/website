@@ -122,10 +122,10 @@
             <!-- Identity details -->
             <div class="identityDetails">
                 <section class="profileHeader">
-                    <h1 class="STHeiti-Light">Sugarscat&nbsp;</h1>
+                    <h1 class="SmileySans-Oblique">Sugarscat&nbsp;</h1>
                     <hr>
-                    <p class="at-item2 ch STKAITI">&nbsp;Hi，我是Sugarscat。你可以访问:</p>
-                    <p class="at-item2 en STKAITI">&nbsp;Hi,I'm Sugarscat.You can visit:</p>
+                    <p class="at-item2 ch SmileySans-Oblique">&nbsp;Hi，我是Sugarscat。你可以访问:</p>
+                    <p class="at-item2 en SmileySans-Oblique">&nbsp;Hi,I'm Sugarscat.You can visit:</p>
                 </section>
                 <!-- Links to Social network accounts -->
                 <div class="socialNetworkNavBar">
@@ -174,39 +174,39 @@
                     </a>
                 </div>
             </div>
-            <div class="showAchievements STHeiti-Light">
+            <div class="showAchievements SmileySans-Oblique">
                 <ul>
                     <li>
                         <img src="img/icon/repository.png" alt="repository" >
                     </li>
-                    <li class="STKAITI">1</li>
+                    <li class="SmileySans-Oblique">1</li>
 
                 </ul>
                 <ul>
                     <li>
                         <img src="img/icon/software.png" alt="software">
                     </li>
-                    <li class="STKAITI">2</li>
+                    <li class="SmileySans-Oblique">2</li>
                 </ul>
                 <ul>
                     <li>
                         <img src="img/icon/video.png" alt="video">
                     </li>
-                    <li class="STKAITI">3</li>
+                    <li class="SmileySans-Oblique">3</li>
                 </ul>
                 <ul>
                     <li>
                         <img src="img/icon/like.png" alt="like">
                     </li>
-                    <li class="STKAITI">4</li>
+                    <li class="SmileySans-Oblique">4</li>
                 </ul>
             </div>
         </div>
         <div class="links">
-            <h3 class="at-item2 ch STHeiti-Light">友情链接：</h3>
-            <h3 class="at-item2 en STHeiti-Light">Friendly links:</h3>
-            <ul class="STKAITI">
-                <li>
+            <h3 class="at-item2 ch SmileySans-Oblique">友情链接：</h3>
+            <h3 class="at-item2 en SmileySans-Oblique">Friendly links:</h3>
+            <ul class="SmileySans-Oblique">
+                <li id="f1">
                     <a href="#" class="hvr-bounce-to-right" target="_blank">
                         <img src="img/headPortrait.png" alt="头像" height="60px">
                         <div class="fAbout">
@@ -216,7 +216,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li id="f2">
                     <a href="#" class="hvr-bounce-to-right" target="_blank">
                         <img src="img/headPortrait.png" alt="头像" height="60px">
                         <div class="fAbout">
@@ -226,7 +226,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li id="f3">
                     <a href="#" class="hvr-bounce-to-right" target="_blank">
                         <img src="img/headPortrait.png" alt="头像" height="60px">
                         <div class="fAbout">
@@ -236,7 +236,7 @@
                         </div>
                     </a>
                 </li>
-                <li>
+                <li id="f4">
                     <a href="#" class="hvr-bounce-to-right" target="_blank">
                         <img src="img/headPortrait.png" alt="头像" height="60px">
                         <div class="fAbout">
@@ -250,5 +250,19 @@
         </div>
     </main>
 </div>
+<script type="text/javascript">
+    $(window).on("scroll",()=>{
+        const f = ["f1", "f2", "f3", "f4"];
+        const e = [];
+        for (let i = 0; i < f.length; i++){
+            e[i] = document.getElementById(f[i]);
+            if(isInViewPort(e[i])){
+                e[i].className = "slideUp";
+            }else {
+                e[i].className = "";
+            }
+        }
+    })
+</script>
 </body>
 </html>
