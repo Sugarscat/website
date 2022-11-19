@@ -252,7 +252,7 @@
 </div>
 </body>
 <script type="text/javascript">
-    $(window).on("scroll",()=>{
+    $(window).scroll(function () {
         const f = ["f1", "f2", "f3", "f4"];
         const e = [];
         for (let i = 0; i < f.length; i++){
@@ -263,6 +263,6 @@
                 e[i].className = "";
             }
         }
-    })
+    });
 </script>
 </html>
