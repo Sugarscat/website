@@ -63,7 +63,7 @@
             <input type="checkbox" id="toggle" />
             <!-- 点击文字选择了复选框,主要是靠label标签的for属性,for属性对应的是复选框的id属性,值相等就可以通过label标签选择到复选框 -->
             <label for="toggle">
-                <div class="container">
+                <div class="narrowScreen">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -122,30 +122,45 @@
                 <div class="separator">
 
                 </div>
-                <a href="paintings.html">
-                <ul>
-                    <li>
-                        <img src="images/1.jpg" alt="" />
-                        <p>玩具总动员</p>
-                    </li>
-                    <li>
-                        <img src="images/2.jpg" alt="" />
-                        <p>汽车总动员</p>
-                    </li>
-                    <li>
-                        <img src="images/3.jpg" alt="" />
-                        <p>仙境的彼方</p>
-                    </li>
-                    <li>
-                        <img src="images/4.jpg" alt="" />
-                        <p>飞屋环游记</p>
-                    </li>
-                    <li>
-                        <img src="images/5.jpg" alt="" />
-                        <p>机器人总动员</p>
-                    </li>
-                </ul>
+                <a href="paintings.html" class="wideScreen">
+                    <ul>
+                        <li>
+                            <img src="images/1.jpg" alt="" />
+                            <p>玩具总动员</p>
+                        </li>
+                        <li>
+                            <img src="images/2.jpg" alt="" />
+                            <p>汽车总动员</p>
+                        </li>
+                        <li>
+                            <img src="images/3.jpg" alt="" />
+                            <p>仙境的彼方</p>
+                        </li>
+                        <li>
+                            <img src="images/4.jpg" alt="" />
+                            <p>飞屋环游记</p>
+                        </li>
+                        <li>
+                            <img src="images/5.jpg" alt="" />
+                            <p>机器人总动员</p>
+                        </li>
+                    </ul>
                 </a>
+                <div class="narrowScreen narrowScreen">
+                    <ul>
+                        <!-- shift+alt可以同时选中多行的同一个位置 -->
+                        <!-- 单按alt,然后点击鼠标,可以同时选中多行的不同位置 -->
+                        <li><div style="width: 109px; height: 55px; background: #77c4e2; margin: 6px; border-radius: 10px"></div></li>
+                        <li><div style="width: 109px; height: 55px; background: #77c4e2; margin: 6px; border-radius: 10px"></div></li>
+                        <li><div style="width: 109px; height: 55px; background: #77c4e2; margin: 6px; border-radius: 10px"></div></li>
+                        <li><div style="width: 109px; height: 55px; background: #77c4e2; margin: 6px; border-radius: 10px"></div></li>
+                        <li><div style="width: 109px; height: 55px; background: #77c4e2; margin: 6px; border-radius: 10px"></div></li>
+                        <!-- 大图片 -->
+                        <li class="bigImg"></li>
+                        <!-- 移动框 -->
+                        <li class="frame"></li>
+                    </ul>
+                </div>
             </div>
             <div class="videos">
 
