@@ -599,7 +599,7 @@ header .head-picture {
         position: absolute;
         right: 20px;
     }
-    .headMenu label .narrowScreen {
+    .headMenu label .narrow-screen {
         /* 相对定位 按照自己的本身位置移动,不会影响父盒子 */
         position: relative;
         top: 17px;
@@ -607,7 +607,7 @@ header .head-picture {
         width: 20px;
         height: 20px;
     }
-    .headMenu label .narrowScreen span {
+    .headMenu label .narrow-screen span {
         /* 先让两个重叠在一起 */
         position: relative;
         top: 0;
@@ -620,16 +620,16 @@ header .head-picture {
         transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
     }
     /* 设置第二条线 */
-    .headMenu label .narrowScreen span:nth-child(2) {
+    .headMenu label .narrow-screen span:nth-child(2) {
         top: 10px;
     }
 
-    .headMenu label .narrowScreen span:nth-child(3) {
+    .headMenu label .narrow-screen span:nth-child(3) {
         top: 4px;
     }
     /* 设置转换 */
     /* + 是相邻兄弟选择器 找相邻的label */
-    .headMenu #toggle:checked + label .narrowScreen span:nth-child(1) {
+    .headMenu #toggle:checked + label .narrow-screen span:nth-child(1) {
         top: 5px;
         /* 顺时针旋转45度 */
         transform: rotate(45deg);
@@ -638,14 +638,14 @@ header .head-picture {
         transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
     }
     /* 选中后的第二条线 */
-    .headMenu #toggle:checked + label .narrowScreen span:nth-child(2) {
+    .headMenu #toggle:checked + label .narrow-screen span:nth-child(2) {
         top: 5px;
         /* 逆时针旋转45度 */
         transform: rotate(-45deg);
         transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
     }
 
-    .headMenu #toggle:checked + label .narrowScreen span:nth-child(3) {
+    .headMenu #toggle:checked + label .narrow-screen span:nth-child(3) {
         display: none;
     }
 
@@ -888,3 +888,6 @@ header .head-picture {
 
 }
 
+@media screen and (max-width: 650px){
+
+}
