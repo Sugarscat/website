@@ -53,6 +53,7 @@ function changeCheckbox() {
         if (bc.checked)
             bc.checked = false;
 }
+
 //绘制粒子
 function drawPoints() {
     const addWidth = $(window).scrollTop();
