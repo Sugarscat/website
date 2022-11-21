@@ -523,8 +523,9 @@ header .head-picture {
     padding: 20px 0;
     width: 100%;
     min-width: 300px;
-    background-image: linear-gradient(to left top, #ddeef8, #d7ecf9, #d0ebfa, #cae9fa, #c3e7fb,
-                        #bee6fb, #bae5fb, #b5e4fb, #b1e4fa, #ade4f8, #aae3f7, #a6e3f5);
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -548,7 +549,7 @@ header .head-picture {
     height: 150px;
     width: 260px;
     list-style: none;
-    background-color: #77c4e2;
+    background: #c6e6e8;
     margin: 20px;
     border-radius: 10px;
     display: flex;
@@ -833,7 +834,7 @@ header .head-picture {
         bottom: 4px;
         width: 100px;
         height: 50px;
-        border: 5px solid salmon;
+        border: 5px solid #f2cac9;
         /* 这里有bug 一直闪烁 这个问题的原因就是 这个移动框虽然没有背景色 但是覆盖了这个图片 */
         /* 加这个属性就可以了 让这个移动框 不在被鼠标捕捉到 */
         pointer-events: none;
@@ -850,7 +851,7 @@ header .head-picture {
         left: calc(50% - 15px);
         width: 30px;
         height: 15px;
-        background-color: salmon;
+        background-color: #f2cac9;
         /* 这个属性我在导航栏那一期有讲 可以去看看 这里就不啰嗦了 */
         clip-path: polygon(0 100%, 50% 0, 100% 100%);
     }
