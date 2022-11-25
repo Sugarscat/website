@@ -28,7 +28,7 @@ body {
     justify-content: center;
     z-index: 50;
     cursor: pointer;
-    box-shadow: 2px 2px 2px #969696;
+    box-shadow: 0 0 5px #969696;
 }
 
 /*font*/
@@ -670,7 +670,7 @@ header .head-picture {
         top: 15px;
         right: 60px;
         border-radius: 10px;
-        box-shadow: 2px 2px 2px #969696;
+        box-shadow: 0 0 5px #969696;
     }
 
     .headMenu .navbar ul li {
