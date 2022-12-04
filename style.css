@@ -524,7 +524,6 @@ header .head-picture {
     width: 100%;
     min-width: 300px;
     background-image: linear-gradient(to right bottom, #d6e1f7, #d3e1f8, #d0e2fa, #cde2fb, #cae3fc, #cbe4fc, #cde5fc, #cee6fc, #d3e8fb, #d9eafb, #deecfa, #e3eef9);
-
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -534,37 +533,6 @@ header .head-picture {
 
 .biliDonate span{
     margin: 0 20px;
-}
-
-.biliDonate ul{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-flow: wrap;
-    justify-content: center;
-}
-
-.biliVideo li{
-    height: 150px;
-    width: 300px;
-    list-style: none;
-    background: white;
-    margin: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    overflow: hidden;
-}
-
-.biliVideo li a {
-    width: 100%;
-    height: 100%;
-}
-
-.biliVideo iframe{
-    height: 100%;
-    width: 100%;
 }
 
 /*phone*/
